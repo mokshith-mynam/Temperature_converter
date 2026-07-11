@@ -5,11 +5,10 @@ public class Temperature {
 
     static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean running = true;
 
         System.out.println("--- Welcome to Temperature Unit Converter Program ---");
 
-        while(running) {
+        while(true) {
             try {
                 System.out.println("1. Convert into Fahrenheit");
                 System.out.println("2. Convert into Celsius");
@@ -31,7 +30,7 @@ public class Temperature {
                     System.out.println("----------------------------------------------------------");
                 } else if (input == 3) {
                     System.out.println("Exiting the program. GoodBye!");
-                    running = false;
+                    System.exit(0);
                 } else {
                     System.out.println("Invalid option selected. Select the option between 1, 2, and 3.");
                     System.out.println(" ");
@@ -43,7 +42,6 @@ public class Temperature {
                 System.out.println("--------------------------------------------------------------");
             }
         }
-        scanner.close();
     }
 
     static float convertCelsiusToFahrenheit(int celsius) {
